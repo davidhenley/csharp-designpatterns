@@ -4,14 +4,11 @@ namespace PubSub
 {
     class Pub
     {
-        public Action OnChange { get; set; }
+        public event Action OnChange = delegate { };
 
         public void Raise()
         {
-            if (OnChange != null)
-            {
-                OnChange();
-            }
+            OnChange();
         }
     }
     
@@ -27,10 +24,6 @@ namespace PubSub
             p.OnChange += () => Console.WriteLine("Subscriber 2!");
 
             p.Raise();
-
-            Console.WriteLine("Press enter to terminate!");
-
-            Console.ReadLine();
         }
     }
 }
