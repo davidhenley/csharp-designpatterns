@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_DesignPatters.-539361666.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_DesignPatterns.1488694318.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
-      <e p="DesignPatters.sln" t="IncludeFlat" />
+      <e p="DesignPatterns.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="PubSub" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
