@@ -2,13 +2,20 @@
 
 namespace PubSub
 {
+    class MyEventArgs : EventArgs
+    {
+        public int Value { get; set; }
+
+        public MyEventArgs(int value) => Value = value;
+    }
+    
     class Pub
     {
-        public event Action OnChange = delegate { };
+        public event EventHandler<MyEventArgs> OnChange = delegate { };
 
         public void Raise()
         {
-            OnChange();
+            OnChange(this, new MyEventArgs(42));
         }
     }
     
@@ -20,8 +27,8 @@ namespace PubSub
             var p = new Pub();
 
             // Subscribe to the publisher's events
-            p.OnChange += () => Console.WriteLine("Subscriber 1!");
-            p.OnChange += () => Console.WriteLine("Subscriber 2!");
+            p.OnChange += (sender, e) => Console.WriteLine($"Subscriber 1! Value: {e.Value}");
+            p.OnChange += (sender, e) => Console.WriteLine($"Subscriber 2! Value: {e.Value}");
 
             p.Raise();
         }
